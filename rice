@@ -1,0 +1,124 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#tabbrowser-tabs .tabbrowser-tab:not([pinned]):hover {
+min-width: 150px !important;
+max-width: 150px !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:not([pinned]) {
+min-width: 27px !important;
+max-width: 27px !important;
+}
+
+#tabbrowser-tabs tab[selected]:not([pinned]) {
+    min-width: 150px !important;
+    max-width: 150px !important;
+}
+
+#tabbrowser-tabs.tab-close-button {
+display:none;
+}
+
+
+
+
+
+
+/* - numbered - only works on some versions of ff
+
+.tabbrowser-tabs
+{ counter-reset: tabs
+}
+.tabbrowser-tab
+{ counter-increment: tabs
+}
+.tabbrowser-tab:after 
+{ content: counter(tabs)
+; position: absolute 
+; font-size: 9pt
+; color: #000 !important
+}
+.tabbrowser-tab:nth-child(8) ~ .tabbrowser-tab:after
+{ content: ""
+}
+.tabbrowser-tab:nth-child(8) ~ .tabbrowser-tab:last-child:after
+{ content: "9"
+}
+.tabbrowser-tab[selected]:after
+{ content: "" !important
+}
+*/
+
+
+
+
+
+.tabbrowser-tab[titlechanged]:not([selected="true"]) {
+   background: #e72f2f !important;
+}
+
+.tabbrowser-tab[selected="true"]{
+  color: #FF7700 !important;
+	font-family: 'Liberation Serif';
+  /*font-weight: normal !important;*/
+}
+
+
+
+/*firefox button, urlbar and tabs*/
+#appmenu-button,
+#appmenu-toolbar-button,
+#feed-button,
+#go-button,
+#star-button,
+#identity-box,
+.autocomplete-history-dropmarker,
+.scrollbutton-up,
+.scrollbutton-down,
+.tab-close-button
+
+	{display:none!important}
+.tabbrowser-tab[label="New Tab"]:not([blah]) label
+	{color:transparent!important; text-shadow:none!important}
+
+/*spacing and transparency*/
+#navigator-toolbox toolbar,
+.tabbrowser-tab:not([selected="true"])
+	{background:transparent!important}
+.tabbrowser-tab
+	{text-align:left!important;
+	margin: 3px 0 0 !important;
+	padding: 0 0px !important;
+	border:none!important;
+	background:transparent!important}
+#urlbar
+	{background:transparent!important;
+	text-align:left!important;
+	margin: -3px -9px 0 0 !important;
+	border:none!important}
+	
+/*disable animations thx anon*/
+.panel-arrowcontainer 
+	{opacity: 1;
+	transform: none;
+	transition: none !important;
+	pointer-events: all !important;}
+
+#BMB_bookmarksPopup 
+	{transform: none !important;
+	transition-duration: 1ms !important;}
+
+panel[type="arrow"]:not([animate="false"]) 
+	{transform: none !important;
+  	transition-duration: 1ms !important;}
+
+#PanelUI-popup * 
+	{transition: none !important;}
+
+findbar 
+	{transition: none !important;}
+
+.tabbrowser-tab {
+	color:#106ff3;
+	font-family: 'Liberation Serif';
+}
